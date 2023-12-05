@@ -4,7 +4,7 @@ import torch
 from torch.utils.data import DataLoader
 from torchvision.transforms import v2
 
-from .pokemon_dataset import PokemonDataset
+from .mammals_dataset import MammalsDataset
 
 
 def get_data_loaders(
@@ -35,9 +35,9 @@ def get_data_loaders(
     ])
 
     # Create datasets
-    ds_train = PokemonDataset(data_path, 'train',
+    ds_train = MammalsDataset(data_path, 'train',
                               transform=train_tfms)
-    ds_val = PokemonDataset(data_path, 'val',
+    ds_val = MammalsDataset(data_path, 'val',
                             transform=val_tfms)
 
     # Create data loaders

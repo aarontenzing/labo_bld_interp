@@ -19,8 +19,7 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 # Ignore palette images with transparency expressed in bytes warnings
 warnings.simplefilter(action='ignore', category=UserWarning)
 
-
-class PokemonDataset(Dataset):
+class MammalsDataset(Dataset):
     def __init__(self, data_path, subset, k=5, val_fold=0, transform=None):
         data_path = Path(data_path)
         df = pd.DataFrame([
@@ -75,3 +74,4 @@ class PokemonDataset(Dataset):
             img = self.transform(img)
 
         return (img, int_label)
+        

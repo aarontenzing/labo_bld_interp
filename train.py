@@ -195,7 +195,7 @@ if __name__ == '__main__':
     )
     parser.add_argument(
         '--val_fold',
-        default=0,
+        default=None,
         help='The index of the validation fold. '
         'If None, all folds are used for training.',
         type=int
